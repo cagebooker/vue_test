@@ -15,3 +15,18 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+console.log("hello world");
+
+import Vue from "vue/dist/vue.esm";
+
+document.addEventListener("turbolinks:load", () => {
+  let el = document.querySelector("#app");
+  if (el){
+    new Vue({
+      el,
+      data: {
+        msg: "I am using Vue.js"
+      },
+    });
+  }
+})
